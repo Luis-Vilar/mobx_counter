@@ -14,6 +14,6 @@ abstract class CounterStoreBase with Store {
 
   @action
   void decrement() {
-    counter.value--;
+    if (counter.value > 0) counter.value--;
   }
 }
